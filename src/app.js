@@ -11,25 +11,29 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(morgan('combined',{stream: {write: (message)=> logger.info(message.trimEnd())}}));
+app.use(
+  morgan('combined', {
+    stream: { write: message => logger.info(message.trimEnd()) },
+  })
+);
 app.use(cookieParser());
 
 app.get('/', (req, res) => {
   res.status(200).send('Hello from Acquisitions');
 });
 
-app.get('/health',(req, res) => {
+app.get('/health', (req, res) => {
   res.status(200).json({
     status: 'OK',
     timestamp: new Date().toISOString(),
-    uptime:process.uptime()
+    uptime: process.uptime(),
   });
 });
 
 app.get('/api', (req, res) => {
-  res.status(200).json({message:'Acquisitions API is running'});
+  res.status(200).json({ message: 'Acquisitions API is running' });
 });
 
-app.use('/api/auth',authRoutes);
+app.use('/api/auth', authRoutes);
 
 export default app;
