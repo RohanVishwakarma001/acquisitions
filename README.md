@@ -344,9 +344,6 @@ npm run prod:docker
 - Update documentation as needed
 - Keep commits atomic and descriptive
 
-## 📝 License
-
-This project is licensed under the ISC License. See the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -357,7 +354,7 @@ This project is licensed under the ISC License. See the [LICENSE](LICENSE) file 
 
 ## 📞 Support
 
-For support, email [your-email@example.com] or create an issue in the GitHub repository.
+For support, email [rohanvishwakarma8261@gmail.com] or create an issue in the GitHub repository.
 
 ---
 
