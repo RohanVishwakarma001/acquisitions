@@ -11,6 +11,9 @@ yarn-error.log*
 !.env.development
 !.env.production
 
+.env.example
+.env.development
+.env.production
 # Logs
 logs/*.log
 *.log
